@@ -1,0 +1,50 @@
+# ====================================================================
+# Git Ignore Configuration
+# Project: Space Intelligence & Geospatial Data Reliability Management System
+# ====================================================================
+
+# Compiled Java Bytecode & Build Output
+bin/
+target/
+build/
+*.class
+
+# Keep bundled zero-setup dependency libraries in lib/
+# (Required so any clone can run without Maven/Gradle/Tomcat)
+!lib/*.jar
+
+# Temporary compilation files
+sources.txt
+*.log
+
+# Runtime SQLite Database & Transaction Files
+# (Auto-generated from resources/schema.sql on first launch)
+space_intel.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Runtime Export & Backup Directories (Keep folder structures tracked)
+reports/*
+!reports/.gitkeep
+
+backups/*
+!backups/.gitkeep
+
+# IDE & Editor Configurations
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+*.sublime-project
+*.sublime-workspace
+.nb-gradle/
+nbproject/
+
+# Operating System Metadata
+Thumbs.db
+Desktop.ini
+.DS_Store
+$RECYCLE.BIN/
